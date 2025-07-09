@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<package name="org.elingua.Administrar" namespace="/" extends="secure">
+		
+		
+		<action name="mostrarAdministrar" class="org.elingua.control.AdministrarAction" method="mostrar">
+			<result name="MOSTRAR">Administrar.jsp</result>
+			
+		</action>
+		<action name="eliminarUsuaris" class="org.elingua.control.AdministrarAction" method="eliminarUsuaris">
+			<result name="ELIMINARUSUARI" type="chain">mostrarAdministrar</result>
+			
+		</action>
+		<action name="afegeixIdioma" class="org.elingua.control.AdministrarAction" method="afegeixIdioma">
+			<result name="AFEGEIXIDIOMA" type="chain">mostrarAdministrar</result>
+			<result name="input">Administrar.jsp</result>
+			
+		</action>
+		<action name="eliminarIdioma" class="org.elingua.control.AdministrarAction" method="eliminarIdioma">
+			<result name="ELIMINARIDIOMA" type="chain">mostrarAdministrar</result>
+			
+		</action>
+		
+		
+	</package>
+
+</struts>

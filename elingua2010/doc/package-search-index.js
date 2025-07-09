@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.elingua.control"},{"l":"org.elingua.DAO"},{"l":"org.elingua.model"}];updateSearchResults();

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="org.elingua.Sessio" namespace="/" extends="struts-default">
+		<action name="login"
+			class="org.elingua.control.SessioAction">
+			<result name="SUCCESS" type="chain" >mostrarPerfilPrivat</result>
+			<result name="ADMIN" type="chain">mostrarAdministrar</result>
+			<result name="input" >/Login.jsp</result></action>
+		<action name="logout" class="org.elingua.control.SessioAction" method="desloguejar">
+			<result name="SUCCESS"  >/Login.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

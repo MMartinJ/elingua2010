@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<package name="org.elingua.Curs" namespace="/" extends="secure">
+		
+		
+		<action name="mostrarCrearCurs" class="org.elingua.control.CursAction" method="mostrar">
+			<result name="MOSTRAR">NouCurs.jsp</result>
+			
+		</action>
+		<action name="crearCurs" class="org.elingua.control.CursAction" method="crearCurs">
+			<result name="CREAR">Curs.jsp</result>
+			<result name="input">NouCurs.jsp</result>
+		</action>
+		<action name="llistarCursos" class="org.elingua.control.CursAction" method="llistarCursos">
+			<result name="LLISTAR">Cursos.jsp</result>
+		</action>
+		<action name="mostrarEditarCurs" class="org.elingua.control.CursAction" method="mostrarEditarCurs">
+			<result name="MOSTRAREDITAR">EditarCurs.jsp</result>
+		</action>
+		<action name="mostrarCurs" class="org.elingua.control.CursAction" method="mostrarCurs">
+			<result name="MOSTRAR">Curs.jsp</result>
+		</action>
+		<action name="editarCurs" class="org.elingua.control.CursAction" method="editarCurs">
+			<result name="EDITAR">Curs.jsp</result>
+			<result name="input">EditarCurs.jsp</result>
+		</action>
+		<action name="borrarCurs" class="org.elingua.control.CursAction" method="eliminarCurs">
+			<result name="ELIMINAR" type="chain">llistarCursos</result> 
+		</action>
+		
+	</package>
+
+</struts>

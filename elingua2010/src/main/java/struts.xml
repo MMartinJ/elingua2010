@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.i18n.encoding" value="UTF-8" /> 
+	<constant name="struts.devMode" value="true" />
+	
+		<package name="secure" namespace="/" extends="struts-default">
+				<interceptors>
+
+					<interceptor name="authenticationInterceptor" class="org.elingua.control.AuthenticationInterceptor"/>
+
+					<interceptor-stack name="secureStack">
+						<interceptor-ref name="authenticationInterceptor"/>
+						<interceptor-ref name="defaultStack"/>
+					</interceptor-stack>
+						
+			</interceptors>
+				
+				<default-interceptor-ref name="secureStack"/>
+
+			<global-results>
+  				 <result name="login" type="redirect">/mostrarLogin.action</result>
+  			</global-results>
+  		
+        
+		
+		
+     </package>
+
+
+<package name="default" extends="struts-default" namespace="/">
+
+		
+		
+		<action name="mostrarLogin">
+			<result>Login.jsp</result>
+		</action>
+		<action name="menu">
+			<result>Menu.jsp</result>
+		</action>
+		
+</package>
+	
+<include file="org/elingua/control/CercarUsuari.xml"/>
+<include file="org/elingua/control/Curs.xml"/>
+<include file="org/elingua/control/Enregistrar.xml"/>	
+<include file="org/elingua/control/Missatge.xml"/>
+<include file="org/elingua/control/ModificarPerfil.xml"/>	
+<include file="org/elingua/control/MostrarPerfilPrivat.xml"/>	
+<include file="org/elingua/control/MostrarPerfilPublic.xml"/>		
+<include file="org/elingua/control/Sessio.xml"/>	
+<include file="org/elingua/control/Estadistiques.xml"/>
+<include file="org/elingua/control/Administrar.xml"/>
+	
+</struts>    

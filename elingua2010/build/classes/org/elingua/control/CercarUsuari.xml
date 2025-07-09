@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="org.elingua.control.CercarUsuari" namespace="/" extends="secure">
+		<action name="cercarUsuari"
+			class="org.elingua.control.CercarUsuariAction">
+		<result name="SUCCESS" >/Cerca.jsp</result>
+		<result name="input" >/Cerca.jsp</result>
+		</action>
+		
+		<action name="mostrarCercarUsuari" class="org.elingua.control.CercarUsuariAction" method="mostrar">
+			<result name="MOSTRAR">Cerca.jsp</result>
+		</action>
+	</package>
+
+</struts>

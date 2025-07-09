@@ -1,0 +1,166 @@
+/*color de fons de tota la pagina web*/
+body{
+    background-color:#EDE8E2;
+    
+}
+/*alinia el text i li dona un espai interior pel contingut; L'utilitzo al login*/
+.centrat{
+    text-align:center;
+    padding-bottom:10px;
+    font-family: arial;
+    font-weight:bold;
+}
+/* posiciono la capsa de login en el centre ,li dono color taronja de fons, li dono bores rodones en firefox*/
+.login {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: 72%;
+    border:solid;
+    background-color:#FF6633;
+    overflow:hidden;
+    /*-moz-border-radius:15px 15px;*/
+
+}
+/* aquesta es la part esquerra de la primera part de la capsalera que es de color negre amb lletres blanques*/
+.capsalera{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    background-color:#000000;
+    color:#FFFFFF;
+    padding-left:0.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+
+}
+/*aquesta es la part dreta de la primera part de la capsalera, tots dos s'uneixen pel fons negre complementant el seu ample 39%+60%=99% deixem un 1% a banda i banda */
+.capsalera2{
+    float:right;
+    padding-right: 10px;
+    
+}
+form{
+    display:inline;
+}
+/*aquesta es la segona part de la capsalera que es de color taronja*/
+.capsalera3{
+    position:fixed;
+    left:0px;
+    margin-top: 2.5%;
+    width:100%;
+    background-color:#FF6633;
+    /*height:23%;*/
+    height:120px;
+    z-index:2;
+    
+}
+/* aquest es el format del titol principal de la web, l' he mogut cap a la dreta deixant lliure la part esquerra per situar el logo*/
+.capsalera3 h1{
+    float:right;
+    clear:right;
+    color:#FFFFFF;
+    padding-right:25%;
+    padding-top:1%;
+    font: bold 23pt verdana,serif;
+}
+/*aquesta es una capsa que arreplega totes les parts de la capsalera per posicionarles fixadament al navegador. aquesta capsa no segueix el fluxe del document*/
+.superCapsalera{
+    position:fixed;
+    width:99%;
+    top:1px;
+}
+/*com que la capsalera y el peu estan fixats al navegador, la barra del navegador servira per desplasar el contingut, definim uns marges a dalt i abaix per que no aparegui el contingut darrere de la capsalera i el peu.*/
+.contingut{
+    background-color:#FFFFFF;
+    margin-top:9%;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 2%;
+    padding-top:3px;
+    
+}
+/*aquesta es la capsa del peu, fixada al navegador, de color negre amb lletres blanques.aquesta capsa no segueix el flux normal del document*/
+.superPeu{
+    position:fixed;
+    bottom:1px;
+    width:99%;
+    background-color:black;
+    color: white;
+    text-align:center;
+}
+/*dona format al titol del contingut de la pagina de registre.*/
+.titol{
+    font: bold 17pt verdana,serif;
+    margin-left: 15px;
+}
+/*dona color  i forma als botons d'enviar dels formularis*/
+input.btn {
+  color:#FFFFFF;
+  font: bold 84% 'trebuchet ms',helvetica,sans-serif;
+  background-color:#FF6633;
+  border: 1px solid;
+  border-color: #000000;
+  
+}
+/*dona color  i forma als select del formulari*/
+/*select.opt{
+  color:#FFFFFF;
+  font: bold 84% 'trebuchet ms',helvetica,sans-serif;
+  background-color:#FF6633;
+  border: 1px solid;
+  border-color: #000000;
+}*/
+/*dona aparensa de boto als links*/
+.lin{
+    color:#FFFFFF;
+    font: bold 84% 'trebuchet ms',helvetica,sans-serif;
+    background-color:#FF6633;
+    border: 1px solid;
+    border-color: #000000;
+    padding:2px;
+    text-decoration:none;
+
+}
+/*aquesta es la disposicio de les capses per seleccionar idiomes*/
+.colder{
+    float:right;clear:right;padding-right:5%;
+    
+}
+.colcen{
+	position: fixed;left:50%;	
+}
+.colizq{
+    float:left;clear:left;
+}
+
+/*format per  a les lletres del error del formulari*/
+#error{
+    font-weight:bold;
+}
+
+/*aixo es el fons dels missatges com una nota*/
+.nota{
+	background-image:url('../img/paper.gif');
+	border-color: #000000;	
+	border: 1px dotted;
+	vertical-align: center;
+	text-align: center;
+	padding: 5%;
+}
+
+/*clases d'estils per els botons del editor de text*/
+.butClass{    
+    border: 1px solid;
+    border-color: #D6D3CE;
+}
+  
+.tdClass{
+    padding-left: 3px;
+    padding-top:3px;
+}
+
+
+

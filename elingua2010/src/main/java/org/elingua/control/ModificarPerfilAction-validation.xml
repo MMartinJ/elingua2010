@@ -1,0 +1,64 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+       "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+  
+   
+  <field name="basics.email">   
+      
+      <field-validator type="email">
+      	 <message key="email.invalida">email.invalida</message>
+      </field-validator>
+      <field-validator type="requiredstring">
+      	<message key="email.requerit">email.requerit</message>
+      </field-validator>
+      
+      
+  </field>
+  
+  
+      <field name="basics.dataNaix">
+      	<field-validator type="date">
+       	    <param name="min">01/01/1910</param>
+              <param name="max">01/01/1993</param>
+              <message key="dataNaix.majorEdat">dataNaix.majorEdat</message>
+      	</field-validator>
+      </field>
+      <field name="usuaris.nomUsuari">
+    <field-validator type="requiredstring">
+      <message key="nomUsuari.requerit">nomUsuari.requerit</message>
+    </field-validator>
+    
+  </field>
+  <field name="usuaris.psswd">
+    <field-validator type="requiredstring">
+      <message key="contrasenya.requerit">contrasenya.requerit</message>
+    </field-validator>
+    <field-validator type="stringlength">
+            <param name="minLength">6</param>
+            <message key="contrasenya.longitud">contrasenya.longitud</message>
+    </field-validator>
+    
+  </field>
+     <field name="basics.nom">
+    <field-validator type="requiredstring">
+      <message key="nom.requerit">nom.requerit</message>
+    </field-validator>
+  </field>
+  <field name="basics.cognom1">
+    <field-validator type="requiredstring">
+      <message key="cognom1.requerit">cognom1.requerit</message>
+    </field-validator>
+  </field>
+  <field name="basics.cognom2">
+    <field-validator type="requiredstring">
+      <message key="cognom2.requerit">cognom2.requerit</message>
+    </field-validator>
+  </field>
+  
+  
+  
+  
+      
+  
+  
+</validators>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<package name="org.elingua.Enregistrar" namespace="/" extends="struts-default">
+		
+		
+		<action name="enregistrar" class="org.elingua.control.EnregistrarAction">
+			
+			<result name="SUCCESS" type="chain" >modificarPerfil</result>
+			<result name="input"  >/Enregistrament.jsp</result>
+		</action>
+		<action name="mostrarEnregistrar" class="org.elingua.control.EnregistrarAction" method="mostrar">
+			
+			<result name="MOSTRAR">/Enregistrament.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

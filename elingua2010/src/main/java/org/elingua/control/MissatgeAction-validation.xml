@@ -1,0 +1,35 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+       "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+  
+   
+  <field name="assumpte">   
+      
+      
+      <field-validator type="requiredstring">
+      	<message key="assumpte.requerit">assumpte.requerit</message>
+      </field-validator>
+      <field-validator type="stringlength">
+            <param name="maxLength">50</param>
+            <message>El Assumpte no pot tenir més de 50 caracters</message>
+    </field-validator>
+      
+      
+  </field>
+  
+  
+      <field name="missatge">
+      	<field-validator type="requiredstring">
+      		<message key="missatge.requerit">missatge.requerit</message>
+    	</field-validator>
+    	<field-validator type="stringlength">
+            <param name="maxLength">500</param>
+            <message>El assumpte no pot tenir mes de 500 caracters.</message>
+    </field-validator>
+    	
+      </field>
+      
+      
+  
+  
+</validators>
