@@ -54,7 +54,7 @@
  
         function updateEditorText(evt) {
             editorContent = dijit.byId('descrEditor').getValue(false);
-            if (!content) {
+            if (!editorContent) {
                 alert("The description cannot be blank");
                 evt.preventDefault();
             }
